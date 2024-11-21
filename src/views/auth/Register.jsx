@@ -69,7 +69,7 @@ const Register = () => {
 
                         <div className="flex items-center mb-3 gap-3 justify-center">
                             <p>Already Have an account?
-                            <Link className="font-bold" to='/login'>Sign in</Link>
+                            <Link className="font-bold" to='../login'>Sign in</Link>
                             </p> 
                         </div>
 

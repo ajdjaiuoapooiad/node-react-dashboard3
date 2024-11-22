@@ -5,12 +5,12 @@ import rootReducer from "./rootReducer";
 
 const store = configureStore({
     reducer: rootReducer,
-    middleware: getDefaultMiddleware => {
+    middleware : getDefaultMiddleware => {
         return getDefaultMiddleware({
-            serializableCheck: false
+            serializableCheck : false
         })
     },
-    devTools: true
+    devTools : true
 })
 
 export default store;

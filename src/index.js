@@ -4,6 +4,9 @@ import './index.css';
 
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import store from './store/index';
+
 const App = lazy(() => import('./App'))
 
 
@@ -14,9 +17,11 @@ root.render(
       v7_startTransition: true,
     }}
   >
+    <Provider store={store} >
     <Suspense>
     <App />
     </Suspense>
+    </Provider>
   </BrowserRouter>
 );
 

@@ -207,20 +207,17 @@ const AdminDashboard = () => {
                 </tr>
                 </thead>
                 <tbody>
-                    <tr>
+                    {
+                    [1,2,3,4,5,6,7,8].map((d, i) => <tr key={i}>
                         <th scope='row' className='py-3 px-4 font-medium whitespace-nowrap'>#34344</th>
                         <th scope='row' className='py-3 px-4 font-medium whitespace-nowrap'>$454</th>
                         <th scope='row' className='py-3 px-4 font-medium whitespace-nowrap'>Pending</th>
                         <th scope='row' className='py-3 px-4 font-medium whitespace-nowrap'>Pending</th>
-                        <th scope='row' className='py-3 px-4 font-medium whitespace-nowrap'>View</th>
-                    </tr>
-                    <tr>
-                        <th scope='row' className='py-3 px-4 font-medium whitespace-nowrap'>#34344</th>
-                        <th scope='row' className='py-3 px-4 font-medium whitespace-nowrap'>$454</th>
-                        <th scope='row' className='py-3 px-4 font-medium whitespace-nowrap'>Pending</th>
-                        <th scope='row' className='py-3 px-4 font-medium whitespace-nowrap'>Pending</th>
-                        <th scope='row' className='py-3 px-4 font-medium whitespace-nowrap'>View</th>
-                    </tr>
+                        <th scope='row' className='py-3 px-4 font-medium whitespace-nowrap'>
+                            <Link>View</Link> </th>
+                    </tr> )
+                    }
+                    
                 </tbody>
             </table>
             </div>

@@ -163,7 +163,7 @@ const Orders = () => {
             
             </div>
 
-
+        <div className='w-full flex justify-end mt-4 bottom-4 right-4'>
         <Pagination 
             pageNumber = {currentPage}
             setPageNumber = {setCurrentPage}
@@ -171,6 +171,7 @@ const Orders = () => {
             parPage = {parPage}
             showItem = {3}
         />
+        </div>
 
 
 

@@ -1,5 +1,6 @@
 import { privateRoutes } from './privateRoutes';
-import MainLayout from './../../layout/MainLayout';
+import MainLayout from '../../layout/MainLayout';
+
 export const getRoutes = () => {
     return {
         path : '/',

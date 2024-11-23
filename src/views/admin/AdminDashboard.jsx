@@ -53,7 +53,29 @@ const AdminDashboard = () => {
             },
             legend : {
                 position : 'top'
-            }
+            },
+   
+        
+            responsive : [
+                {
+                    breakpoint : 565, //px以下
+                    yaxis : {
+                        categories : ['Jan','Feb','Mar','Apl','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
+                    },
+                    options : {
+                        plotOptions: {
+                            bar : {
+                                horizontal : true //横表示
+                            }
+                        },
+                        chart : {
+                            height : "550px"
+                        }
+                    }
+                }
+            ]
+
+
         }
     }
 

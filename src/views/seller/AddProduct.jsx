@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { IoMdImages } from "react-icons/io";
 
 
 
@@ -66,6 +67,19 @@ const AddProduct = () => {
             setAllCategory(categorys)
         }
     }
+
+
+    const [images, setImages] = useState([])
+    const [imageShow, setImageShow] = useState([])
+    const imageHandle = (e) => {
+        const files = e.target.files 
+        const length = files.length;
+        if (length > 0) {
+            setImages([...images, ...files])
+        }
+    }
+    console.log(images)
+
 
 
 
@@ -141,11 +155,19 @@ const AddProduct = () => {
                                 <input className='px-4 py-2 focus:border-indigo-500 outline-none bg-[#6a5fdf] border border-slate-700 rounded-md text-[#d0d2d6]' onChange={inputHandle} value={state.discount} type="number" name='discount' id='discount' placeholder='discount by %' />
                             </div>   
                         </div>
-                        <div className='flex flex-col w-full gap-1'>
+                        <div className='flex flex-col w-full gap-1 mb-5'>
                                 <label htmlFor="description" className='text-[#d0d2d6]'>Description</label>
                                 <textarea className='px-4 py-2 focus:border-indigo-500 outline-none bg-[#6a5fdf] border border-slate-700 rounded-md text-[#d0d2d6]' onChange={inputHandle} value={state.description} name='description' id='description' placeholder='Description' cols="10" rows="4"></textarea> 
                                 
                         </div> 
+
+                        <div className='grid lg:grid-cols-4 grid-cols-1 md:grid-cols-3 sm:grid-cols-2 sm:gap-4 md:gap-4 gap-3 w-full text-[#d0d2d6] mb-4'>
+                            <label className='flex justify-center items-center flex-col h-[180px] cursor-pointer border border-dashed hover:border-red-500 w-full text-[#d0d2d6]' htmlFor="image">
+                                <span><IoMdImages /></span>
+                                <span>Select Image </span>
+                            </label>
+                            <input className='hidden' onChange={imageHandle} multiple type="file" id='image' />
+                        </div>
 
 
 

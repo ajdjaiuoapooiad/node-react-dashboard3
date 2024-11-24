@@ -1,7 +1,8 @@
 import { lazy } from "react";  
-import SellerDashboard from "../../views/seller/SellerDashboard";
-import AddProduct from "../../views/seller/AddProduct";
+
 const Home = lazy(()=> import('../../views/Home'))   
+const SellerDashboard = lazy(()=> import('../../views/seller/SellerDashboard'))   
+const AddProduct = lazy(()=> import('../../views/seller/AddProduct'))   
 
 
 export const sellerRoutes = [
